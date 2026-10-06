@@ -1,0 +1,75 @@
+# Autopilot settings. Secrets (API keys) never go here: they go in GitHub secrets or a local .env file.
+# See SETUP.md.
+
+[store]
+brand = "Budget Planner Studio"   # your shop name, used in copy
+gumroad_url = ""                   # your Gumroad product link, e.g. https://you.gumroad.com/l/budget-2027
+disclose_ai = true                 # adds a one-line AI-assistance note to descriptions (Etsy requires disclosure)
+
+# ---- Products to sell. Each one becomes its own listing. -------------------------------------------------
+# currency: "$", "£" or "€"    theme: "sage", "blush" or "midnight"
+# Optional per variant: gumroad_url = "..." (otherwise [store] gumroad_url is used)
+
+[[variants]]
+year = 2027
+currency = "$"
+theme = "sage"
+price = 11.99
+
+[[variants]]
+year = 2027
+currency = "$"
+theme = "blush"
+price = 11.99
+
+[[variants]]
+year = 2027
+currency = "$"
+theme = "midnight"
+price = 11.99
+
+[[variants]]
+year = 2027
+currency = "£"
+theme = "sage"
+price = 9.99
+
+[[variants]]
+year = 2027
+currency = "€"
+theme = "sage"
+price = 10.99
+
+# ---- Agents -------------------------------------------------------------------------------------------------
+
+[etsy]
+enabled = true
+publish = false        # false: create drafts you can glance at first. true: go live automatically ($0.20 per listing)
+taxonomy_id = 0        # Etsy category id. Find it with: python -m autopilot etsy-taxonomy planner
+quantity = 999
+auto_renew = true
+redirect_uri = "http://localhost:3003/oauth/redirect"   # must match the callback URL in your Etsy app
+
+[gumroad]
+launch_code = "LAUNCH"
+launch_percent_off = 40
+launch_until = "2026-10-09"   # the code is created now and deleted automatically after this date
+
+[gumroad.products]
+# variant id = Gumroad product id (shown in Gumroad's product URL or via the API), e.g.:
+# "budget-2027-usd-sage" = "AbCdEf123=="
+
+[pinterest]
+enabled = true
+pins_per_day = 3
+
+[social]
+posts_per_day = 2
+
+[sales]
+lookback_days = 7
+
+[strategist]
+every_days = 7
+auto_expand = false    # true: the strategist adds the new variants it recommends (up to max_variants)
+max_variants = 12
