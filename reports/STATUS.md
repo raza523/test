@@ -1,4 +1,4 @@
-# Autopilot status: 2026-10-27
+# Autopilot status: 2026-10-28
 
 | Agent | Result | Details |
 |---|---|---|
@@ -9,7 +9,7 @@
 | Pinterest Marketer | ⚙️ needs_setup | set secrets PINTEREST_ACCESS_TOKEN and PINTEREST_BOARD_ID (see SETUP.md, step 4) |
 | Social Queue | ⚙️ needs_setup | no store link yet (live Etsy listing or [store] gumroad_url) |
 | Sales Analyst | ⚙️ needs_setup | connect Gumroad and/or Etsy to track sales |
-| Strategist | ➖ skipped | last ran 2026-10-21 |
+| Strategist | ✅ ok | 2 suggestion(s), 0 added (rules) |
 
 ## Needs you
 
